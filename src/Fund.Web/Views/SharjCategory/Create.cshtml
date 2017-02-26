@@ -1,0 +1,32 @@
+﻿@model Fund.Web.Models.SharjCategory
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+
+
+
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    
+
+		@Html.Partial("_CreateOrEdit", Model)
+
+		<br>
+        <p>
+            <input type="submit" value="ثبت" />
+        </p>
+  
+}
+
+
+
+<div>
+    @Html.ActionLink("بازگشت به لیست", "Index", null, new { @class = "btn blue" })
+</div>
+
+

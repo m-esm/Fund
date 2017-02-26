@@ -1,0 +1,37 @@
+﻿@model Fund.Web.Models.Cost
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+
+@using (Html.BeginForm("Edit", "Costs", FormMethod.Post, new { @id = "FrmCost" }))
+{
+    <div>
+
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(p => p.FactorDateTime)
+        @Html.HiddenFor(p => p.SubmitDate)
+        @Html.HiddenFor(p => p.ID)
+        @Html.Partial("_CreateOrEdit")
+
+        @if (User.IsInRole("admin"))
+        {
+            <p>
+                <input type="submit" class="btn green" value="ثبت" />
+            </p>
+        }
+
+    </div>
+}
+<br />
+
+<div>
+    @Html.ActionLink("بازگشت به لیست", "Index", null, new { @class = "btn blue" })
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

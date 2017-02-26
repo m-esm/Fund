@@ -1,0 +1,31 @@
+﻿@model Fund.Web.Models.SharjCategory
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+
+<h3>آیا نسبت به حذف این رکورد اطمینان دارید ؟</h3>
+    <legend>SharjCategory</legend>
+
+  <div class="field">
+    <span class="bold">@Html.LabelFor(model => model.CategoryName) : </span> @Model.CategoryName
+  </div>
+
+  <div class="field">
+    <span class="bold">@Html.LabelFor(model => model.OrderId) : </span> @Model.OrderId
+  </div>
+
+  <div class="field">
+    <span class="bold">@Html.LabelFor(model => model.Sharjs) : </span> @(Model.Sharjs == null ? "None" : Model.Sharjs.Count.ToString())
+  </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="حذف" /> |
+          @Html.ActionLink("بازگشت به لیست", "Index", null, new { @class = "btn blue" })
+    </p>
+}
+
+

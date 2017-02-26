@@ -1,0 +1,130 @@
+﻿@model Fund.Web.Models.Cost
+
+@{
+    Layout = null;
+    var m2s = new m2s();
+}
+<div class="row">
+
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Name)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Name)
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Detail)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Detail)
+        @Html.ValidationMessageFor(model => model.Detail)
+    </div>
+
+
+
+ 
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Amount)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.Amount, new { @class = "price" })
+        @Html.ValidationMessageFor(model => model.Amount)
+    </div>
+    <div class="editor-label">
+        تاریخ فاکتور
+    </div>
+    <div class="editor-field">
+        <input type="text" required name="factorDate" class="en" value="@(Model.FactorDateTime.HasValue == false ? m2s.miladi2shamsi(DateTime.Now) : m2s.miladi2shamsi(Model.FactorDateTime.Value))" />
+
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.FactorDocumentPath)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.FactorDocumentPath, new { @class = "en" })
+        @Html.ValidationMessageFor(model => model.FactorDocumentPath)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.PaymentDocumentPath)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.PaymentDocumentPath, new { @class = "en" })
+        @Html.ValidationMessageFor(model => model.PaymentDocumentPath)
+    </div>
+
+    @*<div class="editor-label">
+        @Html.LabelFor(model => model.CategoryID)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(model => model.CategoryID, new SelectList(new DB().Costs.Where(p => p.IsCategory), "ID", "Name"),"دسته هزینه را انتخاب کنید ...", new { @class = "browser-default" })
+        @Html.ValidationMessageFor(model => model.CategoryID)
+    </div>
+
+    
+    <div class="editor-field">
+        @Html.DisplayNameFor(p => p.IsCategory)
+        <br />
+        <div class="switch">
+            <label>
+                بله
+                <input id="IsCategory" class="browser-default" name="IsCategory" type="checkbox" />
+                <span class="lever"></span>
+                خیر
+            
+            </label>
+        </div>
+    </div>*@
+
+    @Html.HiddenFor(p=>p.CategoryID)
+    @Html.HiddenFor(p=>p.IsCategory)
+
+
+
+
+</div>
+<div class="row">
+    <div class="col s8">
+
+        @{
+            var partners = new DB().Partners.Where(p => p.Invisible == false);
+        }
+
+
+        @foreach (var item in partners)
+        {
+
+            var percent = "";
+            try
+            {
+                percent = Model.Percents.First(p => p.PartnerID == item.ID && p.CostID == Model.ID).Percent.ToString();
+            }
+            catch
+            {
+
+            }
+
+            <div class="row">
+                <div class="input-field">
+                    <p class="range-field">
+                        <b>@item.Name</b>
+                        <div class="row">
+                            <div class="col s2">
+                                <input type="number" required name="percent_@item.ID" data-id="@item.ID" value="@percent" class="Percent" id="Percent_@item.ID" />
+                            </div>
+                            <div class="col s10">
+                                <input type="range" min="0" max="100" data-id="@item.ID" value="@percent" class="Percent" id="Percent_@item.ID" />
+                            </div>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        }
+
+
+    </div>
+</div>

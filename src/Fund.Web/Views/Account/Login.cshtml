@@ -1,0 +1,81 @@
+﻿@model Fund.Web.Models.LoginModel
+
+@{
+    ViewBag.Title = "Log in";
+}
+<div class="row">
+
+    <div id="login-page">
+
+        <div class="col s12 z-depth-4 card-panel center-align">
+            @if (User.Identity.IsAuthenticated)
+            {
+
+                <div class="container">
+                    <div class="input-field col s12 center">
+                        <img src="~/images/login-logo.png" alt="" class="circle responsive-img valign profile-image-login">
+                        <div class="row">
+                            @User.Identity.Name گرامی <br />
+                            شما قبلا به سیستم وارد شده اید !
+                            <br /><br />
+                            <a href="~/account/logoff">خروج</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            }
+            else
+            {
+
+
+                using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login-form", @autocomplete = "off" }))
+                {
+
+
+                    <div class="row">
+                        <div class="input-field col s12 center">
+                            @Html.ValidationSummary(true)
+                        </div>
+                    </div>
+                    <div class="row margin">
+                        <div class="input-field col s12">
+                            <i class="mdi-social-person-outline prefix"></i>
+                            <input class="en" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');" name="UserName" id="username" type="text">
+                            <label for="username">نام کاربری</label>
+                        </div>
+                    </div>
+                    <div class="row margin">
+                        <div class="input-field col s12">
+                            <i class="mdi-action-lock-outline prefix"></i>
+                            <input class="en" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');" name="Password" id="password" type="password">
+                            <label for="password">رمز عبور</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m12 l12  login-text">
+                            <input disabled="disabled" readonly checked="checked" name="RememberMe" type="checkbox" id="remember-me" />
+                            <label for="remember-me">مرا به خاطر بسپار</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <button type="submit" class="btn waves-effect waves-light col s12">ورود</button>
+                        </div>
+                    </div>
+                    @*<div class="row">
+                        <div class="col s12 forget">
+                            <div><img src="~/Images/Add User-50.png" />  اگر اکانت ندارید   <a href="/account/Register"> ثبت نام </a> کنید .</div>
+                            <div><img src="~/Images/Forgot Password-50.png" />   اگر رمز عبور خود را فراموش کرده اید  <a href="/account/forgot"> کلیک </a> کنید .</div>
+                        </div>
+                    </div>*@
+                }
+
+
+            }
+        </div>
+    </div>
+
+
+</div>

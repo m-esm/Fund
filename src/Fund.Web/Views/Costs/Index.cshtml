@@ -1,0 +1,153 @@
+﻿@model IEnumerable<Fund.Web.Models.Cost>
+@{
+    ViewBag.Title = "Index";
+    var db = new DB();
+
+    var costs = db.Costs.AsEnumerable();
+
+
+}
+
+<!-- .Where(p => db.Costs.Find(p.CostID).Name.Contains("اجاره") == false) -->
+
+@*@foreach (var partner in db.Partners.Include("Percents"))
+{
+
+    double cost = partner.Percents.Where(p=> (DateTime.Now - db.Costs.Find(p.CostID).SubmitDate).TotalDays < 20).Where(p => p.Percent != 0).Sum(p => (Math.Round(p.Percent) / 100) * db.Costs.Find(p.CostID).Amount);
+    <h2>
+        @partner.Name  : <span class="splitBy3">@Math.Round( cost)</span>
+           </h2>
+}*@
+
+<h4>هزینه ها</h4>
+
+<p>
+    <a href="~/Costs/Create" class="btn green waves-effect">ثبت هزینه</a>
+</p>
+
+<p>
+    <a href="~/Costs/Report" class="btn blue waves-effect">گزارش اکســل</a>
+</p>
+
+<h5>
+    تعداد کل : @costs.Count()
+</h5>
+<h5>
+    مبلغ کل هزینه ها : <span class="splitBy3"> @costs.Sum(p => p.Amount)</span> ریال
+</h5>
+<table class="hoverable striped bordered ">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            دسته
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Detail)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.FactorDocumentPath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentDocumentPath)
+        </th>
+        <th>
+            تاریخ فاکتور
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubmitDate)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @if (!string.IsNullOrWhiteSpace(item.Name))
+                {
+                    <span>@item.Name</span>
+                }
+                else
+                {
+                    <span>-</span>
+                }
+
+            </td>
+
+            <td>
+                @if (item.CategoryID.HasValue)
+                {
+                    <span>@costs.First(p => p.ID == item.CategoryID).Name</span>
+                }
+                else
+                {
+                    <span>-</span>
+                }
+            </td>
+
+            <td>
+                <span class="splitBy3"> @Html.DisplayFor(modelItem => item.Amount)</span>
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Detail)
+            </td>
+
+
+            <td>
+                <a target="_blank" href="@item.FactorDocumentPath">
+                    <img src="@item.FactorDocumentPath" style="height:40px;" />
+                </a>
+            </td>
+            <td>
+                <a target="_blank" href="@item.PaymentDocumentPath">
+                    <img src="@item.PaymentDocumentPath" style="height:40px;" />
+                </a>
+
+            </td>
+            <td>
+                @if (item.FactorDateTime.HasValue)
+                {
+                    <span>@m2s.miladi2shamsiStatic(item.FactorDateTime.Value)</span>
+                }
+            </td>
+
+            <td>
+                @m2s.miladi2shamsiStatic(item.SubmitDate)
+            </td>
+
+            <td>
+                @if (User.IsInRole("admin"))
+                {
+                    <div class="edit-delete">
+                        @Html.ActionLink("ویرایش", "Edit", new { id = item.ID }, new { @class = "btn btn-small blue" })
+                        @Html.ActionLink("حذف", "Delete", new { id = item.ID }, new { @class = "btn btn-small red" })
+
+                    </div>
+                }
+                else
+                {
+                    <span>
+                        @Html.ActionLink("مشاهده", "Edit", new { id = item.ID })
+                    </span>
+                }
+            </td>
+        </tr>
+    }
+
+</table>
+
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new
+{
+    page
+}))
+
+

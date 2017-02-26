@@ -1,0 +1,27 @@
+﻿@model Fund.Web.Models.Cost
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+@using (Html.BeginForm("Create", "Costs", FormMethod.Post, new { @id = "FrmCost" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    @Html.Partial("_CreateOrEdit")
+        <p>
+            <input type="submit" class="btn green" value="ثبت" />
+        </p>
+}
+<br />
+
+<div>
+    @Html.ActionLink("بازگشت به لیست", "Index", null, new { @class = "btn blue" })
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

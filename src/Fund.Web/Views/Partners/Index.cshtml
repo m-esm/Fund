@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "شرکا";
+}
+
+@if (User.IsInRole("admin"))
+{
+    <p>
+        <a class="waves-effect waves-light btn modal-trigger" data-target="create" href="#create">ثبت شریک جدید</a>
+    </p>
+
+}
+<div id="List">
+
+</div>
+
+
+
+
+
+<!-- Modal Structure -->
+<div id="create" class="modal">
+    <div class="modal-footer">
+
+        <input type="text" id="PartnerToAdd" placeholder="نام شریکـــ ..." />
+
+        <a href="#!" id="SubmitPartner" class="btn green modal-action modal-close waves-effect waves-green right">ثبت</a>
+
+        <a href="#!" class="btn modal-action modal-close waves-effect waves-green left">بستن</a>
+    </div>
+</div>
+
+@section Scripts{
+
+    <script>
+        function LoadList() {
+            $.get("/Partners/List", null, function (data) {
+                $("#List").html(data);
+            });
+        }
+
+        $(document).ready(function () {
+
+
+            LoadList();
+
+            $(document).on("click", "#SubmitPartner", null, (function () {
+
+                $.get("/Partners/Add", { PartnerName: $("#PartnerToAdd").val() }).done(function (res) {
+                    console.log(res);
+                    LoadList();
+                });
+
+            }));
+
+
+
+        });
+
+
+
+    </script>
+
+}

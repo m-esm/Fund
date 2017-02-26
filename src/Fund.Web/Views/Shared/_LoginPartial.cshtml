@@ -1,0 +1,27 @@
+﻿@if (Request.IsAuthenticated)
+{
+
+    <div class="english waves-effect btn blue">
+        @User.Identity.Name
+    </div>
+    <br />
+  
+    <br />
+    <div class="waves-effect btn red">
+        <a href="~/Account/Logoff" class=" white-text">
+            خروج
+        </a>
+    </div>
+
+
+}
+else
+{
+    <div class="loged-in">
+        <a class="waves-effect waves-light" href="~/account/login"><img src="~/Images/Enter-50.png" /> ورود به سیستم </a>
+    </div>
+
+    @*<div class="loged-in">
+        <a href="~/account/register"><img src="~/Images/Add User-50.png" /> عضویت </a>
+    </div>*@
+}

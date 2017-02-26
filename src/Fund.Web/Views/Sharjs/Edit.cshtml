@@ -1,0 +1,35 @@
+﻿@model Fund.Web.Models.Sharj
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    @Html.HiddenFor(p=>p.SubmitDate)
+
+    @Html.HiddenFor(model => model.ID)
+
+    @Html.Partial("_CreateOrEdit")
+
+
+
+    <p>
+        <input type="submit" class="btn green" value="ثبت" />
+    </p>
+}
+<br />
+
+<div>
+    @Html.ActionLink("بازگشت به لیست", "Index", null, new { @class = "btn blue" })
+
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

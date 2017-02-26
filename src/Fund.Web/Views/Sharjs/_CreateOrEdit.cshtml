@@ -1,0 +1,52 @@
+﻿@model Fund.Web.Models.Sharj
+
+@{
+    Layout = null;
+}
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Amount)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Amount, new { @class = "price" })
+            @Html.ValidationMessageFor(model => model.Amount)
+        </div>
+<br />
+
+
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TransferDocumentPath)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.TransferDocumentPath, new { @class = "en" })
+            @Html.ValidationMessageFor(model => model.TransferDocumentPath)
+        </div>
+<br />
+
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.PartnerID)
+</div>
+<div class="editor-field">
+
+
+    @Html.DropDownListFor(model => model.PartnerID, new SelectList(new DB().Partners, "ID", "Name"), new { @class = "browser-default" })
+    @Html.ValidationMessageFor(model => model.PartnerID)
+</div>
+
+
+<br />
+
+   <div class="editor-label">
+    @Html.LabelFor(model => model.CategoryID)
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.CategoryID, new SelectList(new DB().SharjCategories.OrderBy(p => p.ID).AsEnumerable(), "ID", "CategoryName"), new { @class = "browser-default" })
+    @Html.ValidationMessageFor(model => model.CategoryID)
+</div>
+
+
+     

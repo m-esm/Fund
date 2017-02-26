@@ -1,0 +1,391 @@
+﻿
+@font-face {
+    font-family: 'BRoya';
+    src: url('../Fonts/BRoya.eot') format('eot'), url('../Fonts/BRoya.woff') format('woff'), url('../Fonts/BRoya.ttf') format('truetype');
+}
+
+
+* {
+    direction: rtl;
+    text-align: right;
+    font-family: 'BRoya';
+    font-weight: bold;
+}
+
+html, body {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    cursor: pointer;
+}
+
+ul.chart-labels {
+    text-align: center;
+    margin: 40px 0;
+}
+
+    ul.chart-labels li {
+        display: inline-block;
+        padding: 0 20px;
+        vertical-align: top;
+    }
+
+.edit-delete {
+    width: 120px;
+}
+
+    .edit-delete .btn-small {
+        width: 50%;
+        float: right;
+    }
+
+.btn-small {
+    padding: 0 5px;
+}
+
+ul.chart-labels li span {
+    line-height: 30px;
+    vertical-align: middle;
+    display: inline-block;
+    font-family: Tahoma;
+    font-weight: 100;
+}
+
+    ul.chart-labels li span.box {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        border: 1px solid #000;
+    }
+
+body {
+    background: url(../Images/bg.png);
+    overflow-y: auto;
+    direction: ltr;
+}
+
+.body {
+    min-height: 400px;
+    padding-top: 20px;
+}
+
+
+header {
+    min-height: 180px;
+}
+
+    header nav {
+        background: #efefef;
+        min-height: 75px;
+    }
+
+    header .account-info {
+    }
+
+        header .account-info a img {
+            vertical-align: middle;
+            max-width: 40px;
+        }
+
+        header .account-info div.loged-in a {
+            color: #333;
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            background: #efefef;
+            box-shadow: 0 20px 60px #fefefe inset;
+            width: 200px;
+            margin-top: 8px;
+            border: 1px solid #e8e8e8;
+            font-weight: bold;
+        }
+
+    header .container {
+        padding: 10px;
+    }
+
+nav .container {
+    padding: 0;
+}
+
+header .container .row {
+    margin-bottom: 0;
+}
+
+header nav .inner {
+    box-shadow: 0 30px 60px #fff inset;
+    width: 100%;
+    height: 100%;
+}
+
+header nav a {
+    color: #595d76;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 25px;
+}
+
+header nav ul > li {
+}
+
+header nav a img {
+    display: block;
+    vertical-align: middle;
+    margin: 0 auto;
+    max-width: 50px;
+}
+
+#logo {
+}
+
+    #logo img {
+        max-height: 120px;
+        width: auto;
+    }
+
+#login-page {
+    margin: 20px auto;
+}
+
+    #login-page .forget {
+        font-size: 14px;
+        line-height: 40px;
+    }
+
+        #login-page .forget img {
+            vertical-align: top;
+            max-height: 30px;
+            display: inline-block;
+        }
+
+
+footer, footer * {
+    direction: ltr;
+    text-align: left;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    font-weight: 400;
+    text-shadow: 0 0 1px #ccc;
+}
+
+footer {
+    color: #777;
+    margin-top: 60px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+a.button-collapse {
+}
+
+    a.button-collapse img {
+        max-height: 50px;
+    }
+
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 75px;
+    line-height: 75px;
+}
+
+.side-nav {
+    z-index: 1000;
+    width: auto;
+}
+
+    .side-nav a {
+        padding: 0;
+    }
+
+        .side-nav a img {
+            display: inline-block;
+        }
+
+    .side-nav li a {
+        text-align: right;
+    }
+
+.english, .en, .english *, .en * {
+    font-family: 'Segoe UI';
+    font-size: 13px;
+    text-align: left;
+    direction: ltr;
+}
+
+ul.inline li {
+    display: inline-block;
+}
+
+input[type=text].valid, input[type=text]:focus.valid, input[type=password].valid, input[type=password]:focus.valid, input[type=email].valid, input[type=email]:focus.valid, input[type=url].valid, input[type=url]:focus.valid, input[type=time].valid, input[type=time]:focus.valid, input[type=date].valid, input[type=date]:focus.valid, input[type=datetime-local].valid, input[type=datetime-local]:focus.valid, input[type=tel].valid, input[type=tel]:focus.valid, input[type=number].valid, input[type=number]:focus.valid, input[type=search].valid, input[type=search]:focus.valid, textarea.materialize-textarea.valid, textarea.materialize-textarea:focus.valid {
+    background: #fff;
+    padding: 0 10px 0 0;
+}
+
+table.bordered td, table.bordered th {
+    border: 1px solid #ccc;
+}
+
+.ticket {
+    padding: 10px;
+    border-right: 3px solid #5ab8ff;
+}
+
+    .ticket[data-sender="admin"] {
+        border-right: 3px solid #ff975a;
+    }
+
+.field-validation-error {
+    color: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.editor-field {
+    position: relative;
+}
+
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.90); /* change if the mask should have another color then white */
+    z-index: 999; /* makes sure it stays on top */
+}
+
+/* Clear Loading */
+.clear-loading {
+    text-align: center;
+    display: inline-flex;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* Loading Effect Two */
+.loading-effect-2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -50px;
+}
+
+    .loading-effect-2 > span,
+    .loading-effect-2 > span:before,
+    .loading-effect-2 > span:after {
+        content: "";
+        display: block;
+        border-radius: 50%;
+        border: 2px solid #ccc;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .loading-effect-2 > span {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-left-color: #0055aa;
+        -webkit-animation: effect-2 1s infinite linear;
+        -moz-animation: effect-2 1s infinite linear;
+        -ms-animation: effect-2 1s infinite linear;
+        -o-animation: effect-2 1s infinite linear;
+        animation: effect-2 1s infinite linear;
+    }
+
+        .loading-effect-2 > span:before {
+            width: 75%;
+            height: 75%;
+            border-right-color: #51ac13;
+        }
+
+        .loading-effect-2 > span:after {
+            width: 50%;
+            height: 50%;
+            border-bottom-color: #ff3e00;
+        }
+
+@-webkit-keyframes effect-2 {
+    from {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes effect-2 {
+    from {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+select {
+    margin-bottom: 10px;
+}
+
+ul.settings {
+}
+
+    ul.settings li {
+        display: block;
+    }
+
+        ul.settings li img {
+            vertical-align: middle;
+        }
+
+        ul.settings li a {
+            color: #333;
+            font-size: 20px;
+            vertical-align: middle;
+            line-height: 60px;
+            padding-bottom: 10px;
+        }
+
+            ul.settings li a:hover {
+                border-bottom: 1px dashed #333;
+            }

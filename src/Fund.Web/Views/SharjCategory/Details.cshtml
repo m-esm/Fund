@@ -1,0 +1,29 @@
+﻿@model Fund.Web.Models.SharjCategory
+
+@{
+    ViewBag.Title = "Details";
+
+
+
+}
+
+
+
+  <div class="field">
+    <span class="bold">@Html.LabelFor(model => model.CategoryName) : </span> @Model.CategoryName
+  </div>
+  <div class="field">
+    <span class="bold">@Html.LabelFor(model => model.OrderId) : </span> @Model.OrderId
+  </div>
+  <div class="field">
+    <span class="bold">@Html.LabelFor(model => model.Sharjs) : </span> @(Model.Sharjs == null ? "None" : Model.Sharjs.Count.ToString())
+  </div>
+
+
+
+<p class="details-bottom-buttuns">
+    @Html.ActionLink("ویرایش", "Edit", new { id=Model.ID } , new {@class="btn btn-primary"})
+    @Html.ActionLink("بازگشت به لیست", "Index", new {@class="btn btn-default"})
+</p>
+
+

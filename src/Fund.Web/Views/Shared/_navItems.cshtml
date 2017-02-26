@@ -1,0 +1,60 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <li>
+        <a href="~/">
+            <img src="~/Images/Home-50.png" />
+            خانه
+        </a>
+    </li>
+
+    <li>
+        <a href="~/Sharjs">
+            <img src="~/Images/Card in Use-50.png" />
+            شارژ تنخواه
+        </a>
+    </li>
+
+    <li>
+        <a href="~/Costs">
+            <img src="~/Images/Cash Register-50.png" />
+            هزینه ها
+        </a>
+    </li>
+
+    <li>
+        <a href="~/Partners">
+            <img src="~/Images/Conference-50.png" />
+            شـــرکا
+        </a>
+    </li>
+
+
+
+    if (User.IsInRole("admin"))
+    {
+        <li>
+            <a onclick="window.open('/explorer','name','height=800,width=800');" target="_blank">
+                <img src="~/Images/Open Folder-50.png" />
+                فایل منیجر
+            </a>
+        </li>
+
+        <li>
+            <a href="~/Account/Manage">
+                <img src="~/Images/Password-50.png" />
+                تغییر رمز
+            </a>
+        </li>
+
+
+    <li>
+        <a href="~/Home/Settings">
+            <img src="~/Images/Services-50.png" />
+            تنظیمات
+        </a>
+    </li>
+
+
+    
+    }
+}

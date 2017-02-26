@@ -1,0 +1,91 @@
+<div>
+	<table cellspacing="0" rules="all" border="1" style="font-family:Tahoma;font-size:8pt;border-collapse:collapse;">
+		<tr style="color:White;background-color:Black;border-color:White;border-width:1px;border-style:Solid;height:30px;">
+			<th scope="col">ID</th><th scope="col">Name</th><th scope="col">Details</th><th scope="col">Amount</th><th scope="col">Factor DateTime</th><th scope="col">Submit Date</th><th scope="col">گرافیک</th><th scope="col">گرافیک %</th><th scope="col">IT</th><th scope="col">IT %</th><th scope="col">معماری</th><th scope="col">معماری %</th><th scope="col">پرویز</th><th scope="col">پرویز %</th>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>11</td><td>خرید اینترنت</td><td>&nbsp;</td><td>114,341,0</td><td>1394/07/05</td><td>1394/07/15</td><td>285,852</td><td>25</td><td>285,852</td><td>25</td><td>571,705</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>12</td><td>خرید هارد شر</td><td>&nbsp;</td><td>560,000,0</td><td>1394/06/03</td><td>1394/07/15</td><td>280,000,0</td><td>50</td><td>0</td><td>0</td><td>280,000,0</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>13</td><td>دامنه وب سایت arxecoop.com</td><td>&nbsp;</td><td>306,000</td><td>1394/07/15</td><td>1394/07/15</td><td>153,000</td><td>50</td><td>0</td><td>0</td><td>153,000</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>14</td><td>خرید برای دفتر</td><td>&nbsp;</td><td>113,300,0</td><td>1394/07/13</td><td>1394/07/15</td><td>283,250</td><td>25</td><td>283,250</td><td>25</td><td>566,500</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>15</td><td>مایع دستشویی 4 لیتری</td><td>&nbsp;</td><td>171,500</td><td>1394/07/08</td><td>1394/07/15</td><td>428,75</td><td>25</td><td>428,75</td><td>25</td><td>857,50</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>16</td><td>کلید یدکی 8 عدد</td><td>&nbsp;</td><td>400,000</td><td>1394/07/12</td><td>1394/07/15</td><td>100,000</td><td>25</td><td>100,000</td><td>25</td><td>200,000</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>17</td><td>قند چای</td><td>&nbsp;</td><td>581,500</td><td>1394/07/13</td><td>1394/07/15</td><td>145,375</td><td>25</td><td>145,375</td><td>25</td><td>290,750</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>18</td><td>کابل 40 متر</td><td>&nbsp;</td><td>600,000</td><td>1394/07/01</td><td>1394/07/15</td><td>300,000</td><td>50</td><td>0</td><td>0</td><td>300,000</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>19</td><td>عزیزی</td><td>&nbsp;</td><td>400,000</td><td>1394/07/10</td><td>1394/07/15</td><td>840,00</td><td>21</td><td>800,00</td><td>20</td><td>164,000</td><td>41</td><td>720,00</td><td>18</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>20</td><td>نظافت نیلی</td><td>&nbsp;</td><td>500,000</td><td>1394/07/06</td><td>1394/07/15</td><td>105,000</td><td>21</td><td>100,000</td><td>20</td><td>205,000</td><td>41</td><td>900,00</td><td>18</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>21</td><td>کمیسون املاک</td><td>&nbsp;</td><td>200,000,0</td><td>1394/07/03</td><td>1394/07/15</td><td>420,000</td><td>21</td><td>400,000</td><td>20</td><td>820,000</td><td>41</td><td>360,000</td><td>18</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>22</td><td>داکت های دفتر</td><td>&nbsp;</td><td>125,000</td><td>1394/07/03</td><td>1394/07/15</td><td>625,00</td><td>50</td><td>0</td><td>0</td><td>625,00</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>23</td><td>خدمات نظافت</td><td>&nbsp;</td><td>400,000</td><td>1394/07/17</td><td>1394/07/17</td><td>840,00</td><td>21</td><td>800,00</td><td>20</td><td>164,000</td><td>41</td><td>720,00</td><td>18</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>24</td><td>طی نخی</td><td>&nbsp;</td><td>120,000</td><td>1394/07/17</td><td>1394/07/17</td><td>300,00</td><td>25</td><td>300,00</td><td>25</td><td>600,00</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>25</td><td>بازگشت وجه - اسماعیلی</td><td>&nbsp;</td><td>620,000</td><td>1394/07/21</td><td>1394/07/21</td><td>0</td><td>0</td><td>620,000</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>26</td><td>کیسه زباله - بدون فاکتور - رامتین</td><td>&nbsp;</td><td>600,00</td><td>1394/07/19</td><td>1394/07/22</td><td>150,00</td><td>25</td><td>150,00</td><td>25</td><td>300,00</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>27</td><td>خدمات نظافت</td><td>&nbsp;</td><td>550,000</td><td>1394/07/24</td><td>1394/07/25</td><td>115,500</td><td>21</td><td>110,000</td><td>20</td><td>225,500</td><td>41</td><td>990,00</td><td>18</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>28</td><td>بازگشت وجه - اسماعیلی</td><td>&nbsp;</td><td>842,920</td><td>1394/07/26</td><td>1394/08/03</td><td>0</td><td>0</td><td>842,920</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>29</td><td>قبض آب</td><td>&nbsp;</td><td>173,000</td><td>1394/07/25</td><td>1394/08/03</td><td>432,50</td><td>25</td><td>432,50</td><td>25</td><td>865,00</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>1028</td><td>شلنگ بست لوله بخاری</td><td>&nbsp;</td><td>145,000</td><td>1394/08/03</td><td>1394/08/03</td><td>362,50</td><td>25</td><td>362,50</td><td>25</td><td>725,00</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>1029</td><td>خدمات نظافت</td><td>&nbsp;</td><td>400,000</td><td>1394/08/03</td><td>1394/08/03</td><td>840,00</td><td>21</td><td>800,00</td><td>20</td><td>164,000</td><td>41</td><td>720,00</td><td>18</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>1030</td><td>اجاره</td><td>&nbsp;</td><td>150,000,00</td><td>1394/08/03</td><td>1394/08/03</td><td>210,000,0</td><td>14</td><td>210,000,0</td><td>14</td><td>108,000,00</td><td>72</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>2031</td><td>بازگشت وجه - اسماعیلی</td><td>&nbsp;</td><td>395,000,0</td><td>1394/08/05</td><td>1394/08/05</td><td>0</td><td>0</td><td>395,000,0</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>3031</td><td>تمدید اینترنت</td><td>&nbsp;</td><td>114,341,0</td><td>1394/08/12</td><td>1394/08/12</td><td>285,852</td><td>25</td><td>285,852</td><td>25</td><td>571,705</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>3032</td><td>چای ساده و سس چیلی</td><td>&nbsp;</td><td>266,000</td><td>1394/08/12</td><td>1394/08/12</td><td>665,00</td><td>25</td><td>665,00</td><td>25</td><td>133,000</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>3033</td><td>قبض برق آبان ماه</td><td>&nbsp;</td><td>366,000</td><td>1394/08/12</td><td>1394/08/12</td><td>841,80</td><td>23</td><td>805,20</td><td>22</td><td>164,700</td><td>45</td><td>366,00</td><td>10</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>3034</td><td>روغن سس ادویه فلفل نمک</td><td>&nbsp;</td><td>231,000</td><td>1394/08/12</td><td>1394/08/12</td><td>577,50</td><td>25</td><td>577,50</td><td>25</td><td>115,500</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>3035</td><td>نظافت</td><td>&nbsp;</td><td>500,000</td><td>1394/08/15</td><td>1394/08/22</td><td>105,000</td><td>21</td><td>100,000</td><td>20</td><td>205,000</td><td>41</td><td>900,00</td><td>18</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>3036</td><td>دستمال کاغذی 10 عددی</td><td>&nbsp;</td><td>181,000</td><td>1394/08/19</td><td>1394/08/22</td><td>905,00</td><td>50</td><td>452,50</td><td>25</td><td>452,50</td><td>25</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>3037</td><td>مایع ظرفشویی 4 لیتری اوه</td><td>&nbsp;</td><td>158,500</td><td>1394/08/22</td><td>1394/08/22</td><td>396,25</td><td>25</td><td>396,25</td><td>25</td><td>792,50</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>3038</td><td>بازگشت وجه - اسماعیلی</td><td>&nbsp;</td><td>405,994</td><td>1394/08/22</td><td>1394/08/22</td><td>0</td><td>0</td><td>405,994</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>3039</td><td>نظافت عزیزی</td><td>&nbsp;</td><td>100,000,0</td><td>1394/08/22</td><td>1394/08/22</td><td>210,000</td><td>21</td><td>200,000</td><td>20</td><td>410,000</td><td>41</td><td>180,000</td><td>18</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>3040</td><td>اجاره</td><td>&nbsp;</td><td>150,000,00</td><td>1394/09/05</td><td>1394/09/05</td><td>210,000,0</td><td>14</td><td>210,000,0</td><td>14</td><td>108,000,00</td><td>72</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>3041</td><td>خرید چای - گلستان عطری</td><td>&nbsp;</td><td>167,500</td><td>1394/09/04</td><td>1394/09/05</td><td>335,00</td><td>20</td><td>335,00</td><td>20</td><td>100,500</td><td>60</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>3042</td><td>خرید حجم اضافه اینترنت</td><td>&nbsp;</td><td>348,800</td><td>1394/09/04</td><td>1394/09/05</td><td>697,60</td><td>20</td><td>697,60</td><td>20</td><td>209,280</td><td>60</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>3043</td><td>خدمات نظافت</td><td>&nbsp;</td><td>200,000</td><td>1394/09/06</td><td>1394/09/07</td><td>420,00</td><td>21</td><td>400,00</td><td>20</td><td>820,00</td><td>41</td><td>360,00</td><td>18</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>3044</td><td>خدمات نظافت</td><td>&nbsp;</td><td>400,000</td><td>1394/09/14</td><td>1394/09/21</td><td>840,00</td><td>21</td><td>800,00</td><td>20</td><td>164,000</td><td>41</td><td>720,00</td><td>18</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>3045</td><td>تمدید اینترنت</td><td>&nbsp;</td><td>113,251,0</td><td>1394/09/11</td><td>1394/09/21</td><td>283,127</td><td>25</td><td>283,127</td><td>25</td><td>566,255</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>3046</td><td>بازگشت وجه - اسماعیلی</td><td>&nbsp;</td><td>674,90</td><td>1394/09/21</td><td>1394/09/21</td><td>0</td><td>0</td><td>674,90</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>3047</td><td>شارژ کارتریج</td><td>&nbsp;</td><td>150,000</td><td>1394/09/21</td><td>1394/09/21</td><td>375,00</td><td>25</td><td>375,00</td><td>25</td><td>750,00</td><td>50</td><td>0</td><td>0</td>
+		</tr><tr valign="top" style="background-color:WhiteSmoke;height:20px;">
+			<td>3048</td><td>خدمات نظافت</td><td>&nbsp;</td><td>400,000</td><td>1394/09/22</td><td>1394/09/22</td><td>840,00</td><td>21</td><td>800,00</td><td>20</td><td>164,000</td><td>41</td><td>720,00</td><td>18</td>
+		</tr><tr valign="top" style="height:20px;">
+			<td>3049</td><td>قبض آب</td><td>&nbsp;</td><td>159,000</td><td>1394/09/08</td><td>1394/09/22</td><td>333,90</td><td>21</td><td>318,00</td><td>20</td><td>651,90</td><td>41</td><td>286,20</td><td>18</td>
+		</tr>
+	</table>
+</div>

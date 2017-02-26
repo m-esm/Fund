@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Fund.Web.Models.Partner>
+@{
+    Layout = null;
+}
+
+
+<table class="bordered striped">
+    <tr>
+        <th>
+       شــــــرکا
+        </th>
+
+    
+        <th>
+            @Html.DisplayNameFor(model => model.Invisible)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+       
+            <td>
+                @if (item.Invisible)
+                {
+                    <span>بله</span>
+                }
+                else
+                {
+                    <span>
+                        خیر
+                    </span>
+                }
+            </td>
+
+            <td>
+@if (User.IsInRole("admin"))
+                {
+                <a id="ToggleInvisible" href="~/Partners/ToggleInvisible?PartnerID=@item.ID" class="btn blue lighten-1">مخفی / نمایان</a>
+}
+            </td>
+        </tr>
+    }
+
+</table>

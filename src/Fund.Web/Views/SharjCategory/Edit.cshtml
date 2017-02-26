@@ -1,0 +1,29 @@
+﻿@model Fund.Web.Models.SharjCategory
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+
+        @Html.HiddenFor(model => model.ID)
+		@Html.Partial("_CreateOrEdit", Model)
+
+		<br>
+
+        <p class="back-to-list">
+            <input type="submit" value="ذخیره" />
+        </p>
+
+}
+
+
+
+<div>
+    @Html.ActionLink("بازگشت به لیست", "Index", null, new { @class = "btn blue" })
+</div>

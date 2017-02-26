@@ -1,0 +1,77 @@
+﻿    @{
+
+ 
+    }
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <link rel="icon shortcut icon" type="image/png" href="~/Images/favicon.png" />
+        <title>سیستم مدیریت تنخواه</title>
+        @Styles.Render("~/Css/Bundle")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+
+        @*<div id="preloader">
+
+            <div class="clear-loading loading-effect-2">
+                <span></span>
+            </div>
+
+        </div>*@
+
+        <header>
+            <div class="container">
+                <div class="row">
+
+                    <div class=" col s6 account-info">
+
+                        @Html.Partial("_LoginPartial")
+                        <div class="btn black">@(m2s.miladi2shamsiStatic(DateTime.Now))</div>
+                        <div class="btn blue-grey">@DateTime.Now.ToString("yyyy/MM/dd")</div>
+  </div>
+                    <div class="col s6 left">
+                        <div id="logo">
+                            <img class="responsive-img left" src="~/Images/logo.png" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <nav>
+                <div class="inner">
+                    <div class="container">
+                        <div class="nav-wrapper">
+                            <a href="#" data-activates="mobile-demo" class="button-collapse valign-wrapper">
+                                <img src="~/Images/Menu-50.png" class="valign responsive-img" />
+                            </a>
+                            <ul class="hide-on-med-and-down">
+                                @Html.Partial("_navItems")
+
+                            </ul>
+                            <ul class="side-nav" id="mobile-demo">
+                                @Html.Partial("_navItems")
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+        <div class="container body">
+            @RenderBody()
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="footer-copyright col s12">
+                        &copy; @DateTime.Now.Year - Developed By <a href="http://mohsenes.com">M.Esmaeli</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        @Scripts.Render("~/Scripts/Bundle")
+        @Scripts.Render("~/Scripts/ChartJs/Bundle")
+        @RenderSection("Scripts", false)
+    </body>
+</html>
